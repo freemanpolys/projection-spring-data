@@ -1,6 +1,8 @@
 package com.mygglo.labs.projection.service;
 
+import com.mygglo.labs.projection.custom.domain.EmployeeJobHistory;
 import com.mygglo.labs.projection.domain.Employee;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -40,4 +42,6 @@ public interface EmployeeService {
      * @param id the id of the entity
      */
     void delete(Long id);
+
+    List<EmployeeJobHistory> findAllWithProjection();
 }

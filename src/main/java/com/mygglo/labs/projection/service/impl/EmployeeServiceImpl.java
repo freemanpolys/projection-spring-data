@@ -1,5 +1,6 @@
 package com.mygglo.labs.projection.service.impl;
 
+import com.mygglo.labs.projection.custom.domain.EmployeeJobHistory;
 import com.mygglo.labs.projection.service.EmployeeService;
 import com.mygglo.labs.projection.domain.Employee;
 import com.mygglo.labs.projection.repository.EmployeeRepository;
@@ -74,5 +75,13 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void delete(Long id) {
         log.debug("Request to delete Employee : {}", id);
         employeeRepository.deleteById(id);
+    }
+
+
+
+    @Override
+    public List<EmployeeJobHistory> findAllWithProjection() {
+        log.debug("Request to get all Employees with projection");
+        return employeeRepository.findAllWithProjection();
     }
 }
