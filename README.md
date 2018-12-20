@@ -1,6 +1,6 @@
 # Database
-Create mysql db  project.
-Default credential is root without pass. If different modify src/main/resources/config/application-dev.yml 
+Create mysql db named project.
+Mysql default credential is root without pass. If different modify src/main/resources/config/application-dev.yml 
 
 # Projection
 Controller , Interface are in custom package.
