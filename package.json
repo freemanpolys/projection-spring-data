@@ -1,7 +1,7 @@
 {
-  "name": "projection",
+  "name": "project",
   "version": "0.0.0",
-  "description": "Description for projection",
+  "description": "Description for project",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

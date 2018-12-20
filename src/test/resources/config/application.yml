@@ -16,9 +16,37 @@
 
 spring:
     application:
-        name: projection
+        name: project
     cache:
         type: simple
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:h2:mem:project;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        name:
+        username:
+        password:
+        hikari:
+            auto-commit: false
+    jpa:
+        database-platform: io.github.jhipster.domain.util.FixedH2Dialect
+        database: H2
+        open-in-view: false
+        show-sql: false
+        hibernate:
+            ddl-auto: none
+            naming:
+                physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+                implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        properties:
+            hibernate.id.new_generator_mappings: true
+            hibernate.connection.provider_disables_autocommit: true
+            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.hbm2ddl.auto: validate
+            hibernate.jdbc.time_zone: UTC
+    liquibase:
+        contexts: test
     mail:
         host: localhost
     messages:
@@ -56,7 +84,7 @@ jhipster:
         authentication:
             jwt:
                 # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-                base64-secret: YmEyNzY5YWQ0MDkxN2IwMTgyMTM0MWI2NjFlZjQ5NGE4NGYyMWU3ZTM0NDY3ZGNkOTRlYmNjZWZiNTZiYTQ2MjkwYWY0OThmMmQwOTkxMjYyNGRlNGNjODU4ZTM0OTExNzVlMmNlYWMzZjVjNWZkN2JkYjk5MzEwYjE1NWE5NmU=
+                base64-secret: NWEyNDUzY2JiYmM0MmZmN2YxYzViYWMwNjk4OTEyODE2MWFiZWMzODI5NTYzNTg5OWEzZDE4NTE4YzI1ZTQ3NDI1YmEyZGFmNzNlYzMyN2ZmMTNlNTY5MjI1ZjFkZmQ4MjllZThkMTk4N2FlODFhYjI4NDNmM2IyNTU4Mjc5M2M=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration

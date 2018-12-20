@@ -34,6 +34,32 @@ spring:
     jackson:
         serialization:
             indent-output: true
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:h2:file:./target/h2db/db/project;DB_CLOSE_DELAY=-1
+        username: project
+        password:
+        hikari:
+            auto-commit: false
+    h2:
+        console:
+            enabled: false
+    jpa:
+        database-platform: io.github.jhipster.domain.util.FixedH2Dialect
+        database: H2
+        show-sql: true
+        properties:
+            hibernate.id.new_generator_mappings: true
+            hibernate.connection.provider_disables_autocommit: true
+            hibernate.cache.use_second_level_cache: true
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.cache.region.factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
+            hibernate.cache.hazelcast.instance_name: project
+            hibernate.cache.use_minimal_puts: true
+            hibernate.cache.hazelcast.use_lite_member: true
+    liquibase:
+        contexts: dev
     mail:
         host: localhost
         port: 25
@@ -54,7 +80,7 @@ spring:
                 enabled: true
 
 server:
-    port: 8080
+    port: 8081
 
 # ===================================================================
 # JHipster specific properties
@@ -86,13 +112,13 @@ jhipster:
         authentication:
             jwt:
                 # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-                base64-secret: YmEyNzY5YWQ0MDkxN2IwMTgyMTM0MWI2NjFlZjQ5NGE4NGYyMWU3ZTM0NDY3ZGNkOTRlYmNjZWZiNTZiYTQ2MjkwYWY0OThmMmQwOTkxMjYyNGRlNGNjODU4ZTM0OTExNzVlMmNlYWMzZjVjNWZkN2JkYjk5MzEwYjE1NWE5NmU=
+                base64-secret: NWEyNDUzY2JiYmM0MmZmN2YxYzViYWMwNjk4OTEyODE2MWFiZWMzODI5NTYzNTg5OWEzZDE4NTE4YzI1ZTQ3NDI1YmEyZGFmNzNlYzMyN2ZmMTNlNTY5MjI1ZjFkZmQ4MjllZThkMTk4N2FlODFhYjI4NDNmM2IyNTU4Mjc5M2M=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: projection@localhost
-        base-url: http://127.0.0.1:8080
+        from: project@localhost
+        base-url: http://127.0.0.1:8081
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx:
             enabled: true

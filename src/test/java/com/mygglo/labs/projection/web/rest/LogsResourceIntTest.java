@@ -1,6 +1,6 @@
 package com.mygglo.labs.projection.web.rest;
 
-import com.mygglo.labs.projection.ProjectionApp;
+import com.mygglo.labs.projection.ProjectApp;
 import com.mygglo.labs.projection.web.rest.vm.LoggerVM;
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.LoggerContext;
@@ -26,7 +26,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see LogsResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = ProjectionApp.class)
+@SpringBootTest(classes = ProjectApp.class)
 public class LogsResourceIntTest {
 
     private MockMvc restLogsMockMvc;

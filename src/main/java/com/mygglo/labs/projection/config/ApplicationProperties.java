@@ -3,7 +3,7 @@ package com.mygglo.labs.projection.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * Properties specific to Projection.
+ * Properties specific to Project.
  * <p>
  * Properties are configured in the application.yml file.
  * See {@link io.github.jhipster.config.JHipsterProperties} for a good example.

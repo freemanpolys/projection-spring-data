@@ -1,0 +1,33 @@
+
+/**
+ * The Employee entity.
+ */
+entity Employee {
+	/**
+	* The firstname attribute.
+	*/
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate Instant,
+	salary Long,
+	commissionPct Long
+}
+
+
+entity JobHistory {
+	startDate Instant,
+	endDate Instant,
+}
+
+// defining multiple oneToOne relationships
+relationship OneToOne {
+	JobHistory{employee} to Employee
+}
+
+service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
+
