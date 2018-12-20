@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.mygglo.labs.projection",
+      "nativeLanguage": "fr"
+    },
+    "jhipsterVersion": "5.7.0",
+    "applicationType": "microservice",
+    "baseName": "projection",
+    "packageName": "com.mygglo.labs.projection",
+    "packageFolder": "com/mygglo/labs/projection",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "no",
+    "devDatabaseType": "no",
+    "prodDatabaseType": "no",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YmEyNzY5YWQ0MDkxN2IwMTgyMTM0MWI2NjFlZjQ5NGE4NGYyMWU3ZTM0NDY3ZGNkOTRlYmNjZWZiNTZiYTQ2MjkwYWY0OThmMmQwOTkxMjYyNGRlNGNjODU4ZTM0OTExNzVlMmNlYWMzZjVjNWZkN2JkYjk5MzEwYjE1NWE5NmU=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "fr",
+    "languages": [
+      "fr"
+    ],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
