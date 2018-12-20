@@ -32,7 +32,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20181220143848",
+    "changelogDate": "20181220144124",
     "javadoc": "The Employee entity.",
     "entityTableName": "employee",
     "dto": "no",
@@ -40,7 +40,7 @@
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "projection",
+    "clientRootFolder": "project",
     "applications": "*",
-    "microserviceName": "projection"
+    "microserviceName": "project"
 }

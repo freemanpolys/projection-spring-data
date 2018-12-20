@@ -20,14 +20,14 @@
             "otherEntityRelationshipName": "jobHistory"
         }
     ],
-    "changelogDate": "20181220143849",
+    "changelogDate": "20181220144125",
     "entityTableName": "job_history",
     "dto": "no",
     "pagination": "no",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "projection",
+    "clientRootFolder": "project",
     "applications": "*",
-    "microserviceName": "projection"
+    "microserviceName": "project"
 }
