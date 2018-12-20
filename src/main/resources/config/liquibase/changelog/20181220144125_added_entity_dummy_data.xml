@@ -12,7 +12,8 @@
     -->
     <changeSet id="20181220144125-2" author="jamesgaglo">
         <sql>
-
+            INSERT INTO employee (id, first_name, last_name, email, phone_number, hire_date, salary, commission_pct) VALUES (1, 'Nama', 'Toto', 'hello@world.sn', null, '2018-12-20 15:05:15', 50, 90);
+            INSERT INTO job_history (id, start_date, end_date, employee_id) VALUES (1, '2018-12-20 15:06:04', '2019-12-20 15:06:15', 1);
         </sql>
 
     </changeSet>
