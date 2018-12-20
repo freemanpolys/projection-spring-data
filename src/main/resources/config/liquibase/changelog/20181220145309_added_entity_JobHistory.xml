@@ -17,7 +17,7 @@
     <!--
         Added the entity JobHistory.
     -->
-    <changeSet id="20181220144125-1" author="jhipster">
+    <changeSet id="20181220145309-1" author="jhipster">
         <createTable tableName="job_history">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>

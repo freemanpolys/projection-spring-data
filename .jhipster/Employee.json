@@ -32,7 +32,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20181220144124",
+    "changelogDate": "20181220145308",
     "javadoc": "The Employee entity.",
     "entityTableName": "employee",
     "dto": "no",
